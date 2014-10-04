@@ -1,13 +1,7 @@
 /* Space out content a bit */
 body {
   padding-bottom: 20px;
-  background: -moz-linear-gradient(top,  rgba(140,150,165,0.5) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(140,150,165,0.5)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  rgba(140,150,165,0.5) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  rgba(140,150,165,0.5) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  rgba(140,150,165,0.5) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  rgba(140,150,165,0.5) 0%,rgba(255,255,255,0) 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808c96a5', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+  
 }
 
 a{
@@ -30,7 +24,7 @@ h3{
   padding: 5px;
   background-color: #EEE;
   -webkit-box-shadow: 2px 2px 7px 2px #DADADA;
-  box-shadow: 2px 2px 7px 2px #DADADA;
+  box-shadow: 2px 2px 7px 2px #DEDEDE;
   -webkit-transition: all 500ms ease-in;
   -moz-transition: all 500ms ease-in;
   -ms-transition: all 500ms ease-in;
@@ -52,7 +46,7 @@ h3{
 }
 
 .proy:hover{
-  background-color: #AAA;
+  background-color: #000;
   color: white
 }
 
@@ -61,8 +55,9 @@ h3{
   margin: 0 auto;
 }
 
-.option{
-  float: left;
+.option {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .option:hover {
@@ -113,8 +108,7 @@ h3{
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  margin-top: 120px;
-  padding-bottom: 40px;
+  padding-bottom: 2%;
   border-bottom: 1px solid #e5e5e5;
 }
 .jumbotron .btn {
@@ -130,6 +124,9 @@ h3{
   margin-top: 28px;
 }
 
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
 
 .text-muted img{
   width: 80px;
@@ -137,6 +134,81 @@ h3{
 
 }
 
+.language {
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.prueba {
+  padding-top: 0;
+}
+
+
+#prueba2 {
+  height: 40px;
+}
+
+.borde {
+  margin-top: 2%;
+  border: 1px solid red;
+}
+
+.proyects {
+  margin-bottom: 50px;
+}
+
+.jumbotron-p {
+  text-align: justify;
+}
+
+.proyect-p {
+  text-align: justify;
+}
+
+.centered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn a {
+  color: #ffffff;
+}
+
+.ln-blog {
+  color: #666;
+}
+
+.ln-blog:hover{
+  color: yellow;
+}
+
+.ln-email:hover{
+  color: yellow;
+}
+
+.phrase {
+  font-style: italic;
+}
+
+.flotar {
+  float: left;
+}
+
+.noColor {
+  color: white;
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.noColor:hover{
+  color: white;
+}
+
+.text-principal {
+  margin-top: 2%;
+}
 @media (max-width: 500px){
   .proy .col-sm-4{
     text-align: center;
