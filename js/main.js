@@ -9,6 +9,13 @@ function changeEmailInfo (name,email,text) {
 
 $(document).ready(function(){
 
+  // Go to the top
+  $('#go-top').click(function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 500);
+  });
+
   /***************************************************************************/
   /*************************** Options Controller ****************************/
   /***************************************************************************/
