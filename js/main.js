@@ -106,43 +106,94 @@ $(document).ready(function(){
   /***************************************************************************/
 
   $("#email_send").click(function(e) {
-    $.ajax({
-      type: 'POST',
-      url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-      data: {
-        'key': '3ElXq5-qhNALFFOb7BLFrg',
-        'message': {
-          'from_email': 'tonylattke@hotmail.com',
-          'to': [
-              {
-                'email': 'tonylattke@gmail.com',
-                'name': $("#email_name").val(),
-                'type': 'to'
-              }
-            ],
-          'autotext': 'true',
-          'subject': 'Website - from: ' + $("#email_email").val(),
-          'html': "Name: " + $("#email_name").val() + " - Message: " + $("#email_text").val()
-        }
-      }
-    }).done(function(response) {
+    // Initialize error message
+    var error_msg_de = "Fehler:\n";
+    var error_msg_en = "Error:\n";
+    var error_msg_es = "Error:\n";
+
+    var status_err= false;
+
+    // Extract values
+    var name_val  = $("#email_name").val();
+    var email_val = $("#email_email").val();
+    var msg_val   = $("#email_text").val();
+
+    // Validations
+    if (!isName(name_val)) {
+      status_err = true;
+
+      error_msg_de += " - Kein Name\n";
+      error_msg_en += " - No name\n";
+      error_msg_es += " - No hay nombre\n";
+    }
+    if (!isEmail(email_val)){
+      status_err = true;
+
+      error_msg_de += " - Keine gültige E-Mail\n";
+      error_msg_en += " - No valid E-Mail\n";
+      error_msg_es += " - Correo electrónico no válido\n";
+    }
+    if (!isMsg(msg_val)) {
+      status_err = true;
+
+      error_msg_de += " - Kein Nachricht\n";
+      error_msg_en += " - No message\n";
+      error_msg_es += " - No hay mensaje\n";
+    }
+
+    if (status_err){
       // German
       if ($("#html-tony").attr("lang") == "de") {
-        alert("Vielen dank!");
+        alert(error_msg_de);
       } 
       // English
-      else if ($("#html-tony").attr("lang") == "en") {
-        alert("Thank you!");
+      if ($("#html-tony").attr("lang") == "en") {
+        alert(error_msg_en);
       } 
       // Spanish
-      else {
-        alert("Muchas gracias!");
+      if ($("#html-tony").attr("lang") == "es") {
+        alert(error_msg_es);
       }
+    } else {
+      $.ajax({
+        type: 'POST',
+        url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+        data: {
+          'key': '3ElXq5-qhNALFFOb7BLFrg',
+          'message': {
+            'from_email': 'tonylattke@hotmail.com',
+            'to': [
+                {
+                  'email': 'tonylattke@gmail.com',
+                  'name': email_val,
+                  'type': 'to'
+                }
+              ],
+            'autotext': 'true',
+            'subject': 'Website - from: ' + email_val,
+            'html': "Name: " + name_val + " - Message: " + msg_val
+          }
+        }
+      }).done(function(response) {
+        // German
+        if ($("#html-tony").attr("lang") == "de") {
+          alert("Vielen dank für Ihnen Nachricht " + name_val + "!");
+        } 
+        // English
+        else if ($("#html-tony").attr("lang") == "en") {
+          alert("Thank you for your message " + name_val + "!");
+        } 
+        // Spanish
+        else {
+          alert("Muchas gracias por su mensaje " + name_val + "!");
+        }
 
-      $("#email_name").val("");
-      $("#email_email").val("");
-      $("#email_text").val("");
-    });
+        // Clear information
+        $("#email_name").val("");
+        $("#email_email").val("");
+        $("#email_text").val("");
+      });
+    }
   });
 
   /***************************************************************************/

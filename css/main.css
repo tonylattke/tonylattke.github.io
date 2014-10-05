@@ -7,15 +7,20 @@ body {
 a{
   text-decoration: none !important;
 }
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
 h3{
   margin-top: -10px;
   margin-bottom: 20px;
 }
 
-#title{
-  font-size: 35px;
-  text-transform: uppercase;
-  margin-top: 15px;
+/* Projects */
+
+.projects {
+  margin-bottom: 50px;
 }
 
 .proy{
@@ -116,48 +121,28 @@ h3{
   font-size: 21px;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
-h1, h2, h3, h4 {
-  font-weight: bold;
-}
-
 .text-muted img{
   width: 80px;
   height: 80px;
 
 }
 
+/* Navigation bar*/
 .language {
   color: white;
   margin-left: 10px;
   cursor: pointer;
 }
 
-.prueba {
+.logo-banner {
   padding-top: 0;
 }
 
-
-#prueba2 {
+#logo-setup {
   height: 40px;
 }
 
-.borde {
-  margin-top: 2%;
-  border: 1px solid red;
-}
-
-.proyects {
-  margin-bottom: 50px;
-}
-
+/* Generic setup */
 .jumbotron-p {
   
 }
@@ -192,7 +177,7 @@ h1, h2, h3, h4 {
   font-style: italic;
 }
 
-.flotar {
+.float-img {
   float: left;
 }
 
@@ -208,9 +193,4 @@ h1, h2, h3, h4 {
 
 .text-principal {
   margin-top: 2%;
-}
-@media (max-width: 500px){
-  .proy .col-sm-4{
-    text-align: center;
-  }
 }
