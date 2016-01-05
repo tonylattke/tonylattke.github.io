@@ -21,7 +21,7 @@ a:focus,
 a:active,
 a.active {
   outline: 0;
-  color: #333333;
+  color: #999999;
 }
 h1,
 h2,
@@ -57,13 +57,13 @@ hr.star-light {
 }
 hr.star-light:after {
   color: #fff;
-  background-color: #333333;
+  background-color: #999999;
 }
 hr.star-primary {
-  border-color: #333333;
+  border-color: #4a5f8b;
 }
 hr.star-primary:after {
-  color: #333333;
+  color: #4a5f8b;
   background-color: #fff;
 }
 .img-centered {
@@ -150,7 +150,7 @@ section h2 {
 }
 section.success {
   color: #fff;
-  background: #333333;
+  background: #999999;
 }
 @media (max-width: 767px) {
   section {
@@ -221,7 +221,7 @@ section.success {
 .btn-outline:active,
 .btn-outline.active {
   border: solid 2px #fff;
-  color: #333333;
+  color: #999999;
   background: #fff;
 }
 .floating-label-form-group {
@@ -268,7 +268,7 @@ section.success {
   opacity: 1;
 }
 .floating-label-form-group-with-focus label {
-  color: #333333;
+  color: #999999;
 }
 form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eee;
@@ -281,14 +281,14 @@ footer h3 {
 }
 footer .footer-above {
   padding-top: 50px;
-  background-color: #333333;
+  background-color: #4a5f8b;
 }
 footer .footer-col {
   margin-bottom: 50px;
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #666666;
+  background-color: #4a5f8b;
 }
 .btn-social {
   display: inline-block;
@@ -360,7 +360,7 @@ footer .footer-below {
   width: 1px;
   height: 75px;
   margin-left: 35px;
-  background-color: #333333;
+  background-color: #4a5f8b;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -369,7 +369,7 @@ footer .footer-below {
   z-index: 1052;
   width: 1px;
   height: 75px;
-  background-color: #333333;
+  background-color: #4a5f8b;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
